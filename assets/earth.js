@@ -1,19 +1,18 @@
-let date = dayjs().format("YYYY-MM-DD");
-let api = "?api_key=tPrhy7CjHoxq1fl3lMARW0hvdCS0OyKHAIqP80Cs";
-let queryURL =
-  "https://api.nasa.gov/planetary/earth/assets?date=" +
-  date +
-  "&api_key=" +
-  api;
+let rootURL = "https://api.teleport.org/api/";
+let city = "/cities/";
+let cityURL = rootURL + city;
 
-fetch(queryURL, {
-  method: "GET", //GET is the default.
-  credentials: "same-origin", // include, *same-origin, omit
-  redirect: "follow", // manual, *follow, error
+fetch(cityURL, {
+  method: "GET",
+  credentials: "same-origin",
+  redirect: "follow",
 })
   .then(function (response) {
-    return response.json(); // console log response before returning to troubleshoot! See what server is sending you
+    return response.json();
   })
   .then(function (data) {
     console.log(data);
+    let cityList =
+      data["_embedded"]["city:search-results"][0].matching_full_name;
+    console.log(cityList);
   });
