@@ -1,0 +1,26 @@
+.navbar{
+background-color: rgb(237, 216, 164);
+height: 100px;
+width: 100%;
+}
+
+.center-text{
+text-align: center;
+}
+
+.flex{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.search{
+    margin-left: 0px;
+}
+.a:hover{
+    background-color: aqua;
+}
+
+img{
+    width: 30%;
+    height: 200px;
+}
