@@ -1,22 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/normalize.css" />
-    <link rel="stylesheet" href="./assets/skeleton.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-      crossorigin="anonymous"
-    ></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Current Weather Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   </head>
   <body>
-    <p id="testtext"></p>
-    <script src="assets/earth.js"></script>
-    <script src="assets/script.js"></script>
+    <nav class="navbar head nav">
+        <h1>CURRENT WEATHER EVENTS</h1>
+    </nav>
+    <nav class="navbar nav">
+          <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  All Categories (alphabetical)
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" id="drought">Droughts</a>
+                  <a class="navbar-item" id="dust">Dust & Haze</a>
+                  <a class="navbar-item" id="earthquake">Earthquakes</a>
+                  <a class="navbar-item" id="flood">Floods</a>
+                  <a class="navbar-item" id="landslide">Landslides</a>
+                  <a class="navbar-item" id="manmade">Man Made</a>
+                  <a class="navbar-item" id="ice">Sea & Lake Ice</a>
+                  <a class="navbar-item" id="storm">Severe Storms</a>
+                  <a class="navbar-item" id="snow">Snow</a>
+                  <a class="navbar-item" id="temp">Temp. Extremes</a>
+                  <a class="navbar-item" id="volcano">Volcanoes</a>
+                  <a class="navbar-item" id="color">Water Color</a>
+                  <a class="navbar-item" id="wildfire">Wildfires</a>
+                </div>
+              </div>
+            <div class="navbar-item">Search by date:</div>
+            <div class="navbar-item"><input class="input is-small searchtext" type="text" placeholder="MM/DD/YYYY"></div>
+            <div class="navbar-item"><a class="button is-black"id="searchbutton">SEARCH</a></div>  
+          </div>
+      
+            <div class="navbar-end">
+                <div class="navbar-item"></div>        
+                <div class="navbar-item"><a class="button is-black" id="homebutton">HOME</a>
+                </div>
+            </div>
+        </div>
+      </nav>
+
   </body>
 </html>
