@@ -37,3 +37,8 @@ img{
 .event-title{
     border-bottom: 3px solid black;
 }
+
+#cityimg {
+    width: 400px;
+    box-shadow: 10px 5px 5px black;
+}
