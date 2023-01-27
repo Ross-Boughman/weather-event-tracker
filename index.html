@@ -17,6 +17,7 @@
     <nav class="navbar head nav">
         <h1>CURRENT WEATHER EVENTS</h1>
     </nav>
+    <div class="block">
     <nav class="navbar nav">
           <div class="navbar-start">
             <div class="navbar-item has-dropdown is-hoverable">
@@ -40,7 +41,7 @@
                 </div>
               </div>
             <div class="navbar-item">Search by date:</div>
-            <div class="navbar-item"><input class="input is-small searchtext" type="text" placeholder="MM/DD/YYYY"></div>
+            <div class="navbar-item"><input class="input is-small searchtext" type="text" placeholder="YYYY-MM-DD"></div>
             <div class="navbar-item"><a class="button is-black"id="searchbutton">SEARCH</a></div>  
           </div>
       
@@ -52,24 +53,52 @@
             </div>
         </div>
       </nav>
-
-      <div class="block">
+    </div>
+<div class="block">
           <div class="columns">
-            <div class="column is-4" id="imagespace">
-              <img src="./assets/images/angryvolcano.jpeg">
+            <div class="column is-4 mainimage" id="imagespace">
+              <figure class="image is-4by3">
+              <img src="./assets/images/landslide2.jpeg">
+            </figure>
             </div>
-            <div class="column is-8" id="mainevent"></div>
-          </div>
-      </div>     
+            <div class="column is-8" id="main-event">
 
-      <div class="block">
-        <div class="columns">
-          <div class="column" id="otherevents"></div>
+              <div class="main-content">
+                <h1 class="title event-title" id="event-title">TITLE OF EVENT</h1>
+                <h1 class="subtitle" id="event-category">Category of event</h1>
+                <h1 class="subtitle" id="event-location">Location of event</h1>
+                <h1 class="subtitle" id="event-date">Date of event</h1>
+                <h1 class="subtitle" id="event-time">Time of event</h1>
+              </div>
+
+
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="block">
+          <div class="columns is-multiline">
+            <div class="column is-4" id="imagespace">
+            </div>
+            <div class="column is-8 is-vcentered" id="other-event">
+
+              <div class="main-content">
+                <h1 class="title event-title" id="event-title">TITLE OF EVENT</h1>
+                <h1 class="subtitle" id="event-category">Category of event</h1>
+                <h1 class="subtitle" id="event-location">Location of event</h1>
+                <h1 class="subtitle" id="event-date">Date of event</h1>
+                <h1 class="subtitle" id="event-time">Time of event</h1>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
 
       </div>
       <script src="./assets/script.js"></script>
       <script src="./assets/earth.js"></script>
+
+      
   </body>
 </html>
