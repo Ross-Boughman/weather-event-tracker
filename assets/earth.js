@@ -15,10 +15,12 @@ let citySearch = function () {
     })
     .then(function (data) {
       console.log(data);
-      let cities = data["_links"]["ua:item"][3]["name"]; // can change the array # to target a different city name
-      let cityList = cities.toLowerCase();
-      console.log(cityList);
-      imgSearch(cityList);
+      for (let i = 0; i < 5; i++) {
+        let cities = data["_links"]["ua:item"][i]["name"]; // can change the array # to target a different city name
+        let cityList = cities.toLowerCase();
+        console.log(cityList);
+        imgSearch(cityList);
+      }
     });
 };
 
