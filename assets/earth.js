@@ -1,13 +1,11 @@
 let rootURL = "https://api.teleport.org/api/";
-let city = "cities/";
 let urban = "urban_areas/";
 let image = "slug:";
 let call = "/images/";
-let cityURL = rootURL + city;
-let urbanURL = rootURL + urban + image + "albuquerque" + call;
+let nameURL = rootURL + urban;
 
 let citySearch = function () {
-  fetch(cityURL, {
+  fetch(nameURL, {
     method: "GET",
     credentials: "same-origin",
     redirect: "follow",
@@ -16,14 +14,17 @@ let citySearch = function () {
       return response.json();
     })
     .then(function (data) {
-      let cityList =
-        data["_embedded"]["city:search-results"][0].matching_full_name;
       console.log(data);
+      let cities = data["_links"]["ua:item"][4]["name"]; // can change the array # to target a different city name
+      let cityList = cities.toLowerCase();
+      console.log(cityList);
+      imgSearch(cityList);
     });
 };
 
 let imgSearch = function (cityList) {
-  citySearch(cityList);
+  let urbanURL = rootURL + urban + image + cityList + call;
+  console.log(cityList);
   fetch(urbanURL, {
     method: "GET",
     credentials: "same-origin",
@@ -38,9 +39,10 @@ let imgSearch = function (cityList) {
       console.log(image);
       let newImg = document.createElement("img");
       newImg.setAttribute("src", image);
-      let body = document.querySelector(".block");
+      let body = document.querySelector("#one");
       body.appendChild(newImg);
+      newImg.setAttribute("id", "cityimg");
     });
 };
 
-imgSearch();
+citySearch();
