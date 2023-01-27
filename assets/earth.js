@@ -1,3 +1,5 @@
+// Public API with information on cities around the world
+
 let rootURL = "https://api.teleport.org/api/";
 let urban = "urban_areas/";
 let image = "slug:";
@@ -14,11 +16,11 @@ let citySearch = function () {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-      let cities = data["_links"]["ua:item"][3]["name"]; // can change the array # to target a different city name
-      let cityList = cities.toLowerCase();
-      console.log(cityList);
-      imgSearch(cityList);
+      for (let i = 0; i < 5; i++) {
+        let cities = data["_links"]["ua:item"][i]["name"]; // can change the array # to target a different city name
+        let cityList = cities.toLowerCase();
+        imgSearch(cityList);
+      }
     });
 };
 
@@ -34,14 +36,16 @@ let imgSearch = function (cityList) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       let image = data["photos"][0]["image"]["mobile"];
-      console.log(image);
       let newImg = document.createElement("img");
+      let name = document.createElement("p");
+      name.innerHTML = cityList;
+      console.log(name);
       newImg.setAttribute("src", image);
-      let body = document.querySelector("body");
+      let body = document.querySelector("#imagespace");
       body.appendChild(newImg);
       newImg.setAttribute("id", "cityimg");
+      body.appendChild(name);
     });
 };
 
