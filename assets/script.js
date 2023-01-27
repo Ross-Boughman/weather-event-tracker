@@ -26,9 +26,9 @@ fetch(eveURL + 1)
       date[i] = data.events[i].geometries[0].date;
       link[i] = data.events[i].sources[0].url;
       localStorage.setItem("title-" + [i], title[i]);
-      localStorage.setItem("cat-" + [i], cat[i]);
-      localStorage.setItem("loc-" + [i], loc[i]);
-      localStorage.setItem("date-" + [i], date[i]);
+      localStorage.setItem("cat-" + [i], "Category: " + cat[i]);
+      localStorage.setItem("loc-" + [i], "Coordinates: " + loc[i]);
+      localStorage.setItem("date-" + [i], "Date and Time: " + date[i]);
       localStorage.setItem("link-" + [i], link[i]);
       document.getElementById("event-title-" + [i]).innerHTML =
         localStorage.getItem("title-" + [i]);
