@@ -7,7 +7,7 @@
     <title>Current Weather Events</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
@@ -17,26 +17,16 @@
     <nav class="navbar head nav">
         <h1>CURRENT WEATHER EVENTS</h1>
     </nav>
-    <div class="block">
-    <nav class="navbar nav">
+    <nav class="navbar is-active nav">
           <div class="navbar-start">
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                   All Categories (alphabetical)
                 </a>
                 <div class="navbar-dropdown">
-                  <a class="navbar-item" id="drought">Droughts</a>
-                  <a class="navbar-item" id="dust">Dust & Haze</a>
-                  <a class="navbar-item" id="earthquake">Earthquakes</a>
-                  <a class="navbar-item" id="flood">Floods</a>
-                  <a class="navbar-item" id="landslide">Landslides</a>
-                  <a class="navbar-item" id="manmade">Man Made</a>
                   <a class="navbar-item" id="ice">Sea & Lake Ice</a>
                   <a class="navbar-item" id="storm">Severe Storms</a>
-                  <a class="navbar-item" id="snow">Snow</a>
-                  <a class="navbar-item" id="temp">Temp. Extremes</a>
                   <a class="navbar-item" id="volcano">Volcanoes</a>
-                  <a class="navbar-item" id="color">Water Color</a>
                   <a class="navbar-item" id="wildfire">Wildfires</a>
                 </div>
               </div>
@@ -53,7 +43,7 @@
             </div>
         </div>
       </nav>
-    </div>
+
 <div class="block">
           <div class="columns">
             <div class="column is-4 mainimage" id="imagespace">
@@ -63,13 +53,12 @@
             </div>
             <div class="column is-8" id="main-event">
 
-
               <div class="main-content">
-                <h1 class="title event-title" id="event-title-0">TITLE OF EVENT</h1>
-                <h1 class="subtitle" id="event-category-0">Category of event</h1>
-                <h1 class="subtitle" id="event-location-0">Location of event</h1>
+                <h1 class="title event-title" id="event-title"></h1>
+                <h1 class="subtitle" id="event-category-0"></h1>
+                <h1 class="subtitle" id="event-location-0"></h1>
                 <h1 class="subtitle" id="event-date-0">Date of event</h1>
-                <h1 class="subtitle" id="event-link-0">Link to event</h1>
+                <h1 class="subtitle" id="event-time-0">Time of event</h1>
               </div>
 
 
@@ -84,14 +73,12 @@
             <div class="column is-8 is-vcentered" id="other-event">
 
               <div class="main-content">
-                <h1 class="title event-title" id="event-title-1">TITLE OF EVENT</h1>
-                <h1 class="subtitle" id="event-category-1">Category of event</h1>
-                <h1 class="subtitle" id="event-location-1">Location of event</h1>
+                <h1 class="title event-title" id="event-title"></h1>
+                <h1 class="subtitle" id="event-category-1"></h1>
+                <h1 class="subtitle" id="event-location-1"></h1>
                 <h1 class="subtitle" id="event-date-1">Date of event</h1>
-                <h1 class="subtitle" id="event-link-1">Link to event</h1>
+                <h1 class="subtitle" id="event-link-1">Time of event</h1>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -99,7 +86,7 @@
       </div>
       <script src="./assets/script.js"></script>
       <script src="./assets/earth.js"></script>
-      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
       
   </body>
 </html>
