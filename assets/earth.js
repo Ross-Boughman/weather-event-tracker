@@ -15,7 +15,7 @@ let citySearch = function () {
     })
     .then(function (data) {
       console.log(data);
-      let cities = data["_links"]["ua:item"][4]["name"]; // can change the array # to target a different city name
+      let cities = data["_links"]["ua:item"][3]["name"]; // can change the array # to target a different city name
       let cityList = cities.toLowerCase();
       console.log(cityList);
       imgSearch(cityList);
@@ -39,7 +39,7 @@ let imgSearch = function (cityList) {
       console.log(image);
       let newImg = document.createElement("img");
       newImg.setAttribute("src", image);
-      let body = document.querySelector("#one");
+      let body = document.querySelector("body");
       body.appendChild(newImg);
       newImg.setAttribute("id", "cityimg");
     });
