@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<body>
+  <div class="block">
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" id="homeBtn">
+                <img src="./assets/images/weatherlogo.png" alt="weather logo" style="max-height: 70px">
+            </a>
+        </div>
+
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  All Categories (alphabetical)
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" id="ice">Sea & Lake Ice</a>
+                  <a class="navbar-item" id="storm">Severe Storms</a>
+                  <a class="navbar-item" id="volcano">Volcanoes</a>
+                  <a class="navbar-item" id="wildfire">Wildfires</a>
+                </div>
+              </div>
+            <div class="navbar-item"><input class="input is-small searchtext" type="text" placeholder="YYYY-MM-DD"></div>
+            <div class="navbar-item"><a class="button is-black"id="searchbutton">Search by date</a></div>
+            <div class="navbar-item"><h1 class="title is-3" id="pageType">RECENT WEATHER EVENTS</h1></div>  
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item subtitle" id="testtext"></div>        
+            </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  <div class="container">
+        <div class="columns">
+            <div class="column is-6" id="main-event">
+              <div class="card cardd">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img class="one" alt="event image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media-content">
+                      <p class="title is-4" id="event-title-0"></p>
+                      <p class="subtitle is-4" id="event-category-0"></p>
+                      <p class="subtitle is-6" id="event-location-0"></p>
+                      <p class="subtitle is-6" id="event-date-0"></p>
+                      <p class="subtitle is-6" id="event-link-0"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-6" id="main-event">
+                <div class="card cardd">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img class="two" alt="event image">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                      <div class="media-content">
+                        <p class="title is-4" id="event-title-1"></p>
+                      <p class="subtitle is-4" id="event-category-1"></p>
+                      <p class="subtitle is-6" id="event-location-1"></p>
+                      <p class="subtitle is-6" id="event-date-1"></p>
+                      <p class="subtitle is-6" id="event-link-1"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+
+  <div class="container">
+    <div class="columns">
+        <div class="column is-6" id="main-event">
+          <div class="card cardd">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img class="three" alt="event image">
+              </figure>
+            </div>
+            <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4" id="event-title-2"></p>
+                  <p class="subtitle is-4" id="event-category-2"></p>
+                  <p class="subtitle is-6" id="event-location-2"></p>
+                  <p class="subtitle is-6" id="event-date-2"></p>
+                  <p class="subtitle is-6" id="event-link-2"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6" id="main-event">
+            <div class="card cardd">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img class="four" alt="event image">
+                </figure>
+              </div>
+              <div class="card-content">
+                  <div class="media-content">
+                    <p class="title is-4" id="event-title-3"></p>
+                  <p class="subtitle is-4" id="event-category-3"></p>
+                  <p class="subtitle is-6" id="event-location-3"></p>
+                  <p class="subtitle is-6" id="event-date-3"></p>
+                  <p class="subtitle is-6" id="event-link-3"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+<div class="container">
+  <div class="columns">
+      <div class="column is-6" id="main-event">
+        <div class="card cardd">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img class="five" alt="event image">
+            </figure>
+          </div>
+          <div class="card-content">
+              <div class="media-content">
+                <p class="title is-4" id="event-title-4"></p>
+                <p class="subtitle is-4" id="event-category-4"></p>
+                <p class="subtitle is-6" id="event-location-4"></p>
+                <p class="subtitle is-6" id="event-date-4"></p>
+                <p class="subtitle is-6" id="event-link-4"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6" id="main-event">
+          <div class="card cardd">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img class="six" alt="event image">
+              </figure>
+            </div>
+            <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4" id="event-title-5"></p>
+                <p class="subtitle is-4" id="event-category-5"></p>
+                <p class="subtitle is-6" id="event-location-5"></p>
+                <p class="subtitle is-6" id="event-date-5"></p>
+                <p class="subtitle is-6" id="event-link-5"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="container">
+<div class="columns">
+  <div class="column is-6" id="main-event">
+    <div class="card cardd">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img class="seven" alt="event image">
+        </figure>
+      </div>
+      <div class="card-content">
+          <div class="media-content">
+            <p class="title is-4" id="event-title-6"></p>
+            <p class="subtitle is-4" id="event-category-6"></p>
+            <p class="subtitle is-6" id="event-location-6"></p>
+            <p class="subtitle is-6" id="event-date-6"></p>
+            <p class="subtitle is-6" id="event-link-6"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-6" id="main-event">
+      <div class="card cardd">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img class="eight" alt="event image">
+          </figure>
+        </div>
+        <div class="card-content">
+            <div class="media-content">
+              <p class="title is-4" id="event-title-7"></p>
+            <p class="subtitle is-4" id="event-category-7"></p>
+            <p class="subtitle is-6" id="event-location-7"></p>
+            <p class="subtitle is-6" id="event-date-7"></p>
+            <p class="subtitle is-6" id="event-link-7"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</div>
+<div class="container">
+  <div class="columns">
+      <div class="column is-6" id="main-event">
+        <div class="card cardd">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img class="nine" alt="event image">
+            </figure>
+          </div>
+          <div class="card-content">
+              <div class="media-content">
+                <p class="title is-4" id="event-title-8"></p>
+                <p class="subtitle is-4" id="event-category-8"></p>
+                <p class="subtitle is-6" id="event-location-8"></p>
+                <p class="subtitle is-6" id="event-date-8"></p>
+                <p class="subtitle is-6" id="event-link-8"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6" id="main-event">
+          <div class="card cardd">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img class="ten" alt="event image">
+              </figure>
+            </div>
+            <div class="card-content">
+                <div class="media-content">
+                  <p class="title is-4" id="event-title-9"></p>
+                <p class="subtitle is-4" id="event-category-9"></p>
+                <p class="subtitle is-6" id="event-location-9"></p>
+                <p class="subtitle is-6" id="event-date-9"></p>
+                <p class="subtitle is-6" id="event-link-9"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+<footer class="footer is-primary">
+  <div class="content has-text-centered">
+    <p>
+      <strong>MADE WITH LOVE</strong> by 
+       <a href="https://github.com/Ross-Boughman">Ross Boughman</a>,
+       <a href="https://github.com/katievlasic">Katie Vlasic</a>,
+       <a href="https://github.com">Sean Gibbons</a>, and
+       <a href="https://github.com/rudyxwhite">Brandon Wing</a>.
+       The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+    </p>
+  </div>
+</footer>
+    <script src="./assets/script.js"></script>
+    <script src="./assets/earth.js"></script>
+</body>
+</html>

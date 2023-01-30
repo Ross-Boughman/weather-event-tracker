@@ -16,7 +16,7 @@ function getCat(num) {
       let loc = [];
       let date = [];
       let link = [];
-      for (i = 0; i < 5; i++) {
+      for (i = 0; i < 10; i++) {
         title[i] = data.events[i].title;
         cat[i] = data.events[i].categories[0].title;
         loc[i] = data.events[i].geometries[0].coordinates;
@@ -58,7 +58,7 @@ function getEve() {
       let loc = [];
       let date = [];
       let link = [];
-      for (i = 0; i < 5; i++) {
+      for (i = 0; i < 10; i++) {
         title[i] = data.events[i].title;
         cat[i] = data.events[i].categories[0].title;
         loc[i] = data.events[i].geometries[0].coordinates;
