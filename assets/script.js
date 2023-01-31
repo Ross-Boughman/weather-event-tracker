@@ -1,5 +1,5 @@
 let date = dayjs().format("ddd, MMM D, YYYY h:mm A");
-const elem = document.querySelector("#testtext");
+const elem = document.querySelector("#timetext");
 elem.innerText = date;
 let api = "tPrhy7CjHoxq1fl3lMARW0hvdCS0OyKHAIqP80Cs";
 
@@ -109,6 +109,6 @@ document.getElementById("wildfire").addEventListener("click", () => {
   return getCat(num);
 });
  document.getElementById("homeBtn").addEventListener("click", () => {
-  document.getElementById("pageType").textContent = "RECENT WEATHER EVENTS"
+  document.getElementById("pageType").textContent = "ALL CATEGORIES SHOWN"
    return getEve();
 });
