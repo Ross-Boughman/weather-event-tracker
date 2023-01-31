@@ -17,7 +17,7 @@ let citySearch = function () {
     })
     .then(function (data) {
       let cityArray = [];
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 10; i++) {
         let cities = data["_links"]["ua:item"][i]["name"]; // can change the array # to target a different city name
         let cityList = cities.toLowerCase(); // need to be lowercase for the image lookup
         cityArray.push(cityList);
@@ -29,7 +29,7 @@ let citySearch = function () {
 };
 
 let imgSearch = function (cityArray) {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     let name = cityArray[i];
     let urbanURL = rootURL + urban + image + name + call;
     fetch(urbanURL, {
@@ -47,23 +47,43 @@ let imgSearch = function (cityArray) {
           imagine.setAttribute("id", "cityimg");
           imagine.setAttribute("src", img);
         } else if (i === 1) {
-          let imagine = document.querySelector(".one");
-          imagine.setAttribute("id", "cityimg");
-          imagine.setAttribute("src", img);
-        } else if (i === 2) {
           let imagine = document.querySelector(".two");
           imagine.setAttribute("id", "cityimg");
           imagine.setAttribute("src", img);
-        } else if (i === 3) {
+        } else if (i === 2) {
           let imagine = document.querySelector(".three");
           imagine.setAttribute("id", "cityimg");
           imagine.setAttribute("src", img);
-        } else if (i === 4) {
+        } else if (i === 3) {
           let imagine = document.querySelector(".four");
           imagine.setAttribute("id", "cityimg");
           imagine.setAttribute("src", img);
-        } else if (i === 5) {
+        } else if (i === 4) {
           let imagine = document.querySelector(".five");
+          imagine.setAttribute("id", "cityimg");
+          imagine.setAttribute("src", img);
+        } else if (i === 5) {
+          let imagine = document.querySelector(".six");
+          imagine.setAttribute("id", "cityimg");
+          imagine.setAttribute("src", img);
+        }
+        else if (i === 6) {
+          let imagine = document.querySelector(".seven");
+          imagine.setAttribute("id", "cityimg");
+          imagine.setAttribute("src", img);
+        }
+        else if (i === 7) {
+          let imagine = document.querySelector(".eight");
+          imagine.setAttribute("id", "cityimg");
+          imagine.setAttribute("src", img);
+        }
+        else if (i === 8) {
+          let imagine = document.querySelector(".nine");
+          imagine.setAttribute("id", "cityimg");
+          imagine.setAttribute("src", img);
+        }
+        else if (i === 9) {
+          let imagine = document.querySelector(".ten");
           imagine.setAttribute("id", "cityimg");
           imagine.setAttribute("src", img);
         }
