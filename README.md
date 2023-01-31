@@ -8,10 +8,10 @@ For example, if someone is visiting Alaska, they can select the category of ‘V
 
 [Recent Weather Events Web Application](https://Ross-Boughman.github.io/weather-event-tracker/)
 
-*The landing page list the most recent 10 weather events
-*Search weather events by categories (search bar or category)
-*Weather event location (coordinates), date & time, relevant link (.tcw file or website)
-*Home button returns to landing page
+- The landing page list the most recent 10 weather events
+- Search weather events by categories (search bar or category)
+- Weather event location (coordinates), date & time, relevant link (.tcw file or website)
+- Home button returns to landing page
 
 The following are used by this application:
 
