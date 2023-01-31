@@ -112,3 +112,39 @@ document.getElementById("wildfire").addEventListener("click", () => {
   document.getElementById("pageType").textContent = "ALL CATEGORIES SHOWN"
    return getEve();
 });
+document.getElementById("searchbutton").addEventListener("click", (e) => {
+var anyresult = false; 
+  var searchvalue= document.getElementById("Search-text").value;
+if("Sea & Lake Ice".toUpperCase().includes(searchvalue.toUpperCase())){
+  document.getElementById("search-ice").style.visibility = "visible"; 
+  anyresult = true;
+}else{
+  document.getElementById("search-ice").style.visibility = "hidden";
+}
+if("Severe Storms".toUpperCase().includes(searchvalue.toUpperCase())){
+  document.getElementById("search-storm").style.visibility = "visible";
+  anyresult = true;
+}else{
+  document.getElementById("search-storm").style.visibility = "hidden";
+}
+if("Volcanoes".toUpperCase().includes(searchvalue.toUpperCase())){
+  document.getElementById("search-volcano").style.visibility = "visible";
+  anyresult = true;
+}else{
+  document.getElementById("search-volcano").style.visibility = "hidden";
+}
+if("Wildfires".toUpperCase().includes(searchvalue.toUpperCase())){
+  document.getElementById("search-wildfire").style.visibility = "visible";
+  anyresult = true;
+}else{
+  document.getElementById("search-wildfire").style.visibility = "hidden";
+}
+if(anyresult) {
+document.getElementById("search-container").style.visibility = "visible";
+
+
+}else{
+  document.getElementById("search-container").style.visibility = "hidden";
+}
+});
+
